@@ -1,15 +1,17 @@
 package com.latrosoft.shopy.api.shopyapi.Model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document("products")
 public class Product {
+    @Id
     private String id;
     private String name;
     private String description;
     private String imageUrl;
     private float price;
     private float discount;
-
-
 
     public Product(String id, String name, String description, String imageUrl, float price, float discount) {
         this.id = id;
